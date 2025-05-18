@@ -33,8 +33,5 @@ ENV/
 # Logs
 *.log
 
-# Local configuration
-custom-config.yml
-
 # Docker
 .dockerignore

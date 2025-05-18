@@ -3,7 +3,7 @@ server:
   host: "0.0.0.0"
 
 metrics:
-  endpoint: "http://oblako.itisnotvpn.com:11111/debug/vars"
+  endpoint: "http://host.docker.internal:11111/debug/vars"
 
 logging:
   level: "INFO"
