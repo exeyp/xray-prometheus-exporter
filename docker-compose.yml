@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  xray-prometheus-exporter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: xray-prometheus-exporter
+    container_name: xray-prometheus-exporter
+    ports:
+      - "9099:9099"
+    # Uncomment and modify this section to use a custom config file
+    volumes:
+      - ./custom-config.yml:/etc/xray-prometheus-exporter/config.yml
+    extra_hosts:
+      # Add host gateway to allow container to access host services
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
